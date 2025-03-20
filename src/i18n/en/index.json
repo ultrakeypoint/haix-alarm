@@ -1,5 +1,4 @@
 {
-  "startDateTime": "Start Datetime",
-  "endDateTime": "End Datetime",
+  "attendanceTime": "Attendance Time",
   "automaticAttendance": "Automatic Attendance"
 }

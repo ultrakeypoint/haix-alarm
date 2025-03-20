@@ -1,5 +1,4 @@
 {
-  "startDateTime": "출근일시",
-  "endDateTime": "퇴근일시",
+  "attendanceTime": "출근시간",
   "automaticAttendance": "자동출석"
 }

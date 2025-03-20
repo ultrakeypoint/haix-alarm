@@ -1,3 +1,4 @@
+import {inter, roboto_mono} from '@/components/Font'
 import '@/assets/styles/global.css'
 import BottomNavbar from '@/components/BottomNavbar'
 import TopNavbar from '@/components/TopNavbar'
@@ -8,7 +9,8 @@ export default async function RootLayout({children}: Readonly<RootLayoutProp>) {
   return (
     <html
       lang="ko"
-      suppressHydrationWarning>
+      suppressHydrationWarning
+      className={`${inter.variable} ${roboto_mono.variable}`}>
       <body>
         <Provider>
           <TopNavbar />

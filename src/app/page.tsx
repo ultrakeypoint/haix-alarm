@@ -1,43 +1,23 @@
 'use client'
 
 import HaixLayout from '@/components/HaixLayout'
-import {Field, Input, Stack, Switch} from '@chakra-ui/react'
+import {Field, Input, InputGroup, Stack, Switch} from '@chakra-ui/react'
 import {useState} from 'react'
 import {useTranslation} from 'react-i18next'
 
 const App = () => {
-  const [startDatetime, setStartDatetime] = useState<Date | null>(new Date())
-  const [endDatetime, setEndDateTime] = useState<Date | null>(new Date())
   const {t} = useTranslation()
-
+  const [startDatetime, setStartDatetime] = useState<Date | null>(new Date())
   return (
     <HaixLayout>
       <Stack
         gap="8"
-        maxW="sm"
-        css={{'--field-label-width': '96px'}}>
+        maxW="sm">
         <Field.Root orientation="horizontal">
-          <Field.Label>{t('startDateTime')}</Field.Label>
-          <Input
-            type="datetime-local"
-            placeholder="me@example.com"
-            flex="1"
-          />
-        </Field.Root>
-        <Field.Root orientation="horizontal">
-          <Field.Label>{t('endDateTime')}</Field.Label>
-          <Input
-            type="datetime-local"
-            placeholder="me@example.com"
-            flex="1"
-          />
-        </Field.Root>
-        <Field.Root orientation="horizontal">
-          <Field.Label>{t('automaticAttendance')}</Field.Label>
-          <Switch.Root>
-            <Switch.HiddenInput />
-            <Switch.Control />
-          </Switch.Root>
+          <Field.Label>{t('attendanceTime')}</Field.Label>
+          <InputGroup endElement="시">
+            <Input placeholder="7 ~ 13 입력" />
+          </InputGroup>
         </Field.Root>
         <Field.Root orientation="horizontal">
           <Field.Label>{t('automaticAttendance')}</Field.Label>
