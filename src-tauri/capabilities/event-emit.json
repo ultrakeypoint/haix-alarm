@@ -1,0 +1,10 @@
+{
+  "identifier": "event-emit",
+  "description": "Enables the emit command without any pre-configured scope",
+  "permissions": ["core:event:allow-emit"],
+  "windows": ["main"],
+  "webview": "",
+  "remote": {
+    "urls": ["http://localhost:3000/", "https://*.dankkume.com/"]
+  }
+}
